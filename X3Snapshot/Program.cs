@@ -155,8 +155,8 @@ namespace X3Snapshot
                     sb.Append(" --- " + x.VersionName + "\r\n");
                 }
 
-                sb.Append("  ");
-                sb.Append("List of modified/added files:");
+                sb.Append("  \r\n");
+                sb.Append("List of modified/added files:\r\n");
                 foreach (var s in StringList)
                 {
                     sb.Append(s);
