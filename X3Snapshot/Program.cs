@@ -133,12 +133,12 @@ namespace X3Snapshot
                         if (file.CurrentStatus == FileHash.MatchStatus.Modified)
                         {
                             newFile.CreateEntryFromFile(rootDir + file.RelativeFileName, file.RelativeFileName.Substring(1, file.RelativeFileName.Length - 1), CompressionLevel.Optimal);
-                            StringList.Add("[MODIFIED FILE] file.RelativeFileName\r\n");
+                            StringList.Add("[MODIFIED FILE] + " + file.RelativeFileName + "\r\n");
                         }
                         else if (file.CurrentStatus == FileHash.MatchStatus.NoMatch)
                         {
                             newFile.CreateEntryFromFile(rootDir + file.RelativeFileName, file.RelativeFileName.Substring(1, file.RelativeFileName.Length - 1), CompressionLevel.Optimal);
-                            StringList.Add("[NEW FILE] file.RelativeFileName\r\n");
+                            StringList.Add("[NEW FILE] + " + file.RelativeFileName + "\r\n");
                         }
                         progress.Report((double)currentFileCount++ / totalCount);
                     }
